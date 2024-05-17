@@ -13,7 +13,7 @@ export default function Form(props){
             onChange={(e) => props.setTask(e.target.value)} 
             placeholder="buy milk..."/>
             </label>
-            <input style={{fontSize:"30px", fontFamily: "Lucida Handwriting", color:"#402a23"}} type="submit" />
+            <motion.input animate={{scale:.9}} style={{fontSize:"30px", fontFamily: "Lucida Handwriting", color:"#402a23"}} type="submit" />
            </form>
         </div>
     )

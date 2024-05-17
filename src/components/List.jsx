@@ -16,7 +16,7 @@ export default function List(props){
         
         <motion.li 
         contentEditable="true"
-        whileHover={{scale:1.2}}>{props.task+"  "}
+        whileHover={{scale:1.2, color:"#c3195d"}}>{props.task+"  "}
         <motion.button 
         onClick={()=>props.handleRemove(props.index)}
         animate={{scale:.8}}
