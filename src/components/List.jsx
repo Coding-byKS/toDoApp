@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./List.css";
+import { motion } from "framer-motion";
 export default function List(props){
 
     const [styles, setStyle] = useState(false)
@@ -10,11 +11,16 @@ export default function List(props){
     
     return(  
         <div id="listMain">                 
-        <li onClick={handleClick} contentEditable="true" style={styles?{ textDecoration: 'line-through', color: "green"}:{ textDecoration: 'none' }}>{props.task + "   "}  
+        {/* <li onClick={handleClick} contentEditable="true" style={styles?{ textDecoration: 'line-through', color: "green"}:{ textDecoration: 'none' }}>{props.task + "   "}   */}
         
         
-        
-        <button onClick={()=>props.handleRemove(props.index)}>Remove</button></li>
+        <motion.li 
+        contentEditable="true"
+        whileHover={{scale:1.2}}>{props.task+"  "}
+        <motion.button 
+        onClick={()=>props.handleRemove(props.index)}
+        animate={{scale:.8}}
+        whileHover={{scale:1}}>Remove</motion.button></motion.li>
         </div>
 
     )
