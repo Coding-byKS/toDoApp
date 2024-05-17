@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./List.css";
 export default function List(props){
 
     const [styles, setStyle] = useState(false)
@@ -8,13 +9,13 @@ export default function List(props){
         }
     
     return(  
-        <>                 
-        <li onClick={handleClick} contentEditable="true" style={styles?{ textDecoration: 'line-through', color: "green"}:{ textDecoration: 'none' }}>{props.task}</li>
-        {/* <li><div contentEditable="true">{props.task}</div></li> */}
+        <div id="listMain">                 
+        <li onClick={handleClick} contentEditable="true" style={styles?{ textDecoration: 'line-through', color: "green"}:{ textDecoration: 'none' }}>{props.task + "   "}  
         
         
-        <button onClick={()=>props.handleRemove(props.index)}>Done. Remove this task</button>
-        </>
+        
+        <button onClick={()=>props.handleRemove(props.index)}>Remove</button></li>
+        </div>
 
     )
 
