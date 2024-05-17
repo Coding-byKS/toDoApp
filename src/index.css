@@ -30,6 +30,9 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-color:#fad3cf;
+  /* background-color: #a676a4; */
+background-image: url("https://www.transparenttextures.com/patterns/corrugation.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 h1 {
